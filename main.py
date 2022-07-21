@@ -19,11 +19,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    # 「おはよう」で始まるか調べる
+    # !rebootと発言すると起動
     if message.content.startswith("!reboot"):
-        # 送り主がBotだった場合反応したくないので
+        # Botの発言は除外
         if client.user != message.author:
-            # メッセージを書きます
+            # 動作を記載
             await message.channel.send("再起動します")
             reboot.reboot()
             await message.channel.send("再起動しました")

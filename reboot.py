@@ -1,4 +1,3 @@
-
 from sqlite3 import connect
 from webbrowser import get
 import yaml
@@ -10,10 +9,6 @@ def reboot():
     config = yaml.safe_load(file)
     ssh_ip = config["IP"]
     ssh_user = config["user"]
-    #ssh_port = config["port"]
-    #ssh_rhost = config["remort_host"]
-    #ssh_rport = config["remort_port"]
-    #ssh_lport = config["local_port"]
     ssh_command = config["CMD"]
     ssh_key = config["ssh_key"]
 
