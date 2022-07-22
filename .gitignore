@@ -1,5 +1,5 @@
 config.yml
-known_hosts
+id_ed25519
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
